@@ -17,21 +17,54 @@ formDOM.addEventListener('submit', event => {
         <div class="item">
             <div class="header">
                 <div class="index">${++count}</div>
-                <button class="btn" type="button">Delete</button>
+                <div class="actions">
+                    <button class="btn" type="button">Edit</button>
+                    <button class="btn" type="button">Delete</button>
+                </div>
             </div>
-            <div class="content">${inputDOM.value}</div>
+            <div class="content text">
+                <p>${inputDOM.value}</p>
+                <form class="form">
+                    <input value="${inputDOM.value}" placeholder="Your task" type="text" required>
+                    <button type="submit">Save</button>
+                    <button type="button">Cancel</button>
+                </form>
+            </div>
         </div>`);
 
     inputDOM.value = '';
     inputDOM.focus();
 
-    const deleteBtnDOM = document.querySelector('.btn');
+    h1DOM.textContent = `Task planner (${count - deletedCount})`;
+
+    const contentDOM = listDOM.querySelector('.content');
+    const pDOM = contentDOM.querySelector('p');
+    const editBtnDOM = document.querySelector('.btn');
+    const deleteBtnDOM = document.querySelector('.btn:last-child');
+    const editFormDOM = listDOM.querySelector('form');
+    const editInputDOM = editFormDOM.querySelector('input');
+    const cancelBtnDOM = editFormDOM.querySelector('button:last-child');
+
+    editBtnDOM.addEventListener('click', () => {
+        contentDOM.classList.add('form');
+        contentDOM.classList.remove('text');
+    });
 
     deleteBtnDOM.addEventListener('click', () => {
-        deleteBtnDOM.parentNode.parentNode.remove();
+        deleteBtnDOM.parentNode.parentNode.parentNode.remove();
         deletedCount++;
         h1DOM.textContent = `Task planner (${count - deletedCount})`;
     });
 
-    h1DOM.textContent = `Task planner (${count - deletedCount})`;
+    editFormDOM.addEventListener('submit', (event) => {
+        event.preventDefault();
+        pDOM.textContent = editInputDOM.value;
+        contentDOM.classList.add('text');
+        contentDOM.classList.remove('form');
+    });
+
+    cancelBtnDOM.addEventListener('click', () => {
+        contentDOM.classList.add('text');
+        contentDOM.classList.remove('form');
+    });
 });
