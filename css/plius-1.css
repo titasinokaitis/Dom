@@ -1,0 +1,11 @@
+.click-me {
+  display: flex;
+  gap: 1rem;
+}
+.click-me p {
+  font-size: 4rem;
+}
+.click-me button {
+  padding: 0 1rem;
+  font-size: 2rem;
+}

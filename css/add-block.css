@@ -1,0 +1,16 @@
+button {
+  padding: 0.5em 1em;
+  font-size: 2rem;
+}
+
+.block-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+.block-list .block {
+  width: 5rem;
+  height: 5rem;
+  background-color: yellowgreen;
+}
