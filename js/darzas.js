@@ -1,3 +1,7 @@
+import { header } from "./header.js";
+
+header();
+
 const titleDOM = document.querySelector('title');
 const h1DOM = document.querySelector('h1');
 const title = 'Zuikio daržas';

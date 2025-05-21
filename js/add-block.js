@@ -1,3 +1,7 @@
+import { header } from "./header.js";
+
+header();
+
 const btnDOM = document.getElementById('add');
 const listDOM = document.querySelector('.block-list');
 

@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 2rem 0;
+  width: 100%;
+}
+.form label {
+  font-size: 1.2rem;
+}
+.form input {
+  width: 100%;
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+}
+.form button {
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.list .item {
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid #ccc;
+}
+.list .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ddd;
+  padding: 0.5rem 1rem;
+}
+.list .index {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.list .btn {
+  font-size: 1rem;
+  padding: 0.2em 0.5em;
+}
+.list .content {
+  padding: 1rem;
+}

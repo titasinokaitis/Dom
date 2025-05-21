@@ -1,3 +1,7 @@
+import { header } from "./header.js";
+
+header();
+
 const listDOM = document.querySelector('.list');
 
 const data = [

@@ -1,3 +1,7 @@
+import { header } from "./header.js";
+
+header();
+
 const formDOM = document.querySelector('form');
 const inputDOM = formDOM.querySelector('input');
 const listDOM = document.querySelector('.todo-list');
