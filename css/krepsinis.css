@@ -1,0 +1,44 @@
+.home {
+  color: red;
+}
+.away {
+  color: blue;
+}
+
+.board {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #eee;
+  box-shadow: 0 0.2rem 0.4rem #0006;
+}
+.board .team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.board .result {
+  font-size: 5rem;
+}
+.board p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.board .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.board button {
+  font-size: 1.5rem;
+  padding: 0.2em;
+}
+
+.history {
+  margin: 3rem 0;
+}
+.history .entry {
+  font-size: 1.2rem;
+}
